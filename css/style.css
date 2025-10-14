@@ -1,0 +1,603 @@
+@charset "utf-8";
+html {
+  font-size: 100%;
+}
+body {
+  color: #000;
+  background-color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+}
+/*common*/
+a {
+  color: #000;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+.sec-title {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: normal;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f00;
+  margin: 0;
+  margin-bottom: 60px;
+}
+/*header*/
+#header {
+  margin-bottom: 80px;
+}
+.block-1,
+.block-2,
+.block-3 {
+    display: flex;
+    justify-content: space-between;
+}
+.block-1,
+.block-2 {
+margin-bottom: 4.167%;  
+}
+.block-1 {
+  gap: 8.3%;
+  padding:4.167% 10.4% 0 10.4%;
+}
+.block-2 {
+  gap: 4.375%;
+  padding: 0 15.3% 0 15.3%;
+}
+.block-3 {
+  gap: 9.375%;
+  padding: 0 18.2% 0 18.2%;
+}
+.block-1 .img-1 img,
+.block-1 .img-2 img,
+.block-1 .img-3 img {
+  width: 100%;
+  height: auto;
+}
+.block-2 .img-4 img,
+.block-2 .img-5 img,
+.block-2 .img-6 img,
+.block-2 .img-7 img, 
+.block-2 .img-8 img {
+  width: 80%;
+  height: auto;
+}
+.block-3 .img-9 img,
+.block-3 .img-10 img,
+.block-3 .img-11 img,
+.block-3 .img-12 img, 
+.block-3 .img-13 img {
+  width: 60%;
+  height: auto;
+}
+.block-1 .img-2 img,
+.block-2 .img-4 img,
+.block-2 .img-8 img,
+.block-3 .img-12 img
+ {
+  transform: rotate(180deg);
+}
+.block-1 .img-3 img,
+.block-2 .img-5 img,
+.block-3 .img-11 img {
+  transform: rotate(90deg);
+}
+.block-2 .img-7 img,
+.block-3 .img-9 img,
+.block-3 .img-13 img  {
+  transform: rotate(-90deg);
+}
+.site-title {
+  font-size: 5rem;
+  font-weight: normal;
+  font-family: 'Kanit', sans-serif;
+  margin: 0;
+  margin-bottom: 80px;
+  line-height: 1;
+}
+.language-btn {
+  font-size: 1.125rem;
+  font-weight: 300;
+  position: sticky;
+  transform: rotate(90deg);
+  top: 10%;
+  left: 93.35%;
+  width: fit-content; 
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.language-btn button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+.language-btn button.active {
+  color: #000;
+  border-bottom: 1px solid #f00;
+}
+
+.language-btn span {
+  display: inline-block;
+  padding: 0 5px;
+}/*information*/
+.time-en,
+.time-ja {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.place {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.admission {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+}
+.ticket-btn {
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-bottom: 60px;
+  line-height: 2.5;
+  width: 230px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.ticket-btn span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ticket-btn::before,
+.ticket-btn::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #f00;
+  transition: all 0.3s ease;
+}.ticket-btn span::before,
+.ticket-btn span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #f00;
+  transition: all 0.3s ease;
+}
+.ticket-btn::before,
+.ticket-btn span::before {
+  width: 2px;
+  height: 50%;
+}
+.ticket-btn::after,
+.ticket-btn span::after {
+  width: 20%;
+  height: 2px;
+}
+.ticket-btn:hover::before,
+.ticket-btn span:hover::before {
+  height: 100%;
+}
+.ticket-btn:hover::after,
+.ticket-btn span:hover::after {
+  width: 100%;
+}
+/*photographer*/
+#photographer {
+  margin-bottom: 60px;
+}
+#photographer ul {
+  padding: 0 5.56%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.78%;
+}
+#photographer ul li {
+  flex: 1 1 calc((100% - (2.78% * 2)) / 3);
+}
+#photographer .thumb {
+  display: block;
+  margin-inline: auto;
+  max-width: 400px;
+  max-height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+.tatiana .thumb .photo,
+.lin .thumb .photo,
+.aoi .thumb .photo {
+  width: 100%;
+  max-width: 400px;
+  max-height: 300px;
+  aspect-ratio: 4 / 3;
+  display: block;
+  margin: 0 auto;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+}
+#photographer ul li:hover img {
+  transform: scale(1.1);
+}
+#photographer .photographer-name {
+  display: block;
+  padding-top: 15px;
+  font-size: 1rem;
+}
+.bg-wrapper {
+  width: 100%;
+  background-image: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 0.8) 0%,
+  rgba(255, 255, 255, 0.9) 50%,
+  rgba(255, 255, 255, 0.95) 100%),
+url(../img/footer-vs.webp);  background-repeat: no-repeat;
+background-size: contain;
+  background-position: 52% 75px;
+  margin: 0 auto;
+  
+}
+/*about*/
+#about .text {
+  font-size: 1.125rem;
+  line-height: 2;
+  margin-bottom: 60px;
+}
+/*access*/
+#access {
+  margin-bottom: 80px;
+}
+#access .js-translatable {
+  font-size: 1.125rem;
+  line-height: 2;
+}
+#access .map-icon {
+  width: 21px;
+  height: 30px;
+  
+}
+/*footer*/
+#footer {
+  margin-bottom: 60px;
+}
+#footer .copy-right {
+  font-size: 0.875rem;
+}
+/*PC photographer個別ページ*/
+/*common*/
+#tatiana-page .sec-title, 
+#lin-page .sec-title, 
+#aoi-page .sec-title {
+  border-bottom: 2px solid #44E32F;
+  line-height: 1;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.back-btn {
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  left: 3%;
+}
+.material-symbols-outlined {
+  vertical-align: top;
+}
+#tatiana-page .wrapper, 
+#lin-page .wrapper, 
+#aoi-page .wrapper {
+  background-image: none;
+  padding: 0 75px 60px 130px;
+}
+#tatiana-page #tatiana, 
+#lin-page #lin, 
+#aoi-page #aoi{
+  display:grid;
+  grid-template-columns: clamp(280px, 43.75vw, 630px)
+    clamp(320px, 39.93vw, 575px); 
+  justify-content: center;
+}
+/*image*/
+#tatiana-page .image-list .list img, 
+#lin-page .image-list .list img, 
+#aoi-page .image-list .list img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+  aspect-ratio:4 / 3;
+}
+#tatiana-page #tatiana .image-list, 
+#lin-page #lin .image-list, 
+#aoi-page #aoi .image-list { grid-column: 1; grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 630px;
+}
+/*text*/
+#tatiana-page #tatiana .profile, 
+#lin-page #lin .profile, 
+#aoi-page #aoi .profile { grid-column: 2; grid-row: 1;
+  text-align: left;
+  margin-left: 30px;
+}
+#tatiana-page #tatiana .links, 
+#lin-page #lin .links, 
+#aoi-page #aoi .links { grid-column: 2; grid-row: 2;
+text-align: left;
+margin-left: 30px;
+}
+#tatiana-page #tatiana .links a, 
+#lin-page #lin .links a, 
+#aoi-page #aoi .links a {
+  display: inline-block;
+  padding-bottom: 1px;
+  margin-right: 40px;
+  font-size: 1rem;
+  border-bottom: 1px solid #000;
+}
+#tatiana-page #tatiana .name, 
+#lin-page #lin .name, 
+#aoi-page #aoi .name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+#tatiana-page #tatiana .kana, 
+#lin-page #lin .kana,
+#aoi-page #aoi .kana {
+  font-size: 0.875rem;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 50px;
+}
+#tatiana-page #tatiana .desc, 
+#lin-page #lin .desc, 
+#aoi-page #aoi .desc {
+  font-size: 1rem;
+  line-height: 2;
+  text-align: justify;
+  text-align-last: left;
+  -moz-text-align-last: left;
+  text-justify: inter-ideograph;
+  line-break: strict;
+  width: 32rem;
+}
+#lin-page #lin .links .x img{
+  width: 22px;
+  height: 22px;
+}
+@media screen and (max-width:768px){
+  /*common*/
+  .sec-title {
+  font-size: 1.25rem;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #f00;
+  margin-bottom: 40px;
+}
+.site-title {
+  font-size: 1.6525rem;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+.language-btn {
+  font-size: 1rem;
+}
+/*header*/
+#header {
+  margin-bottom: 60px;
+}
+/*information*/
+.time-en,
+.time-ja {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.place {
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+.admission {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.ticket-btn {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  width: 190px;
+  height: 36px;
+  line-height: 2.25;
+}
+.ticket-btn::before,
+.ticket-btn span::before {
+  width: 1.5px;
+  height: 100%;
+  transition: none;
+}
+.ticket-btn::after,
+.ticket-btn span::after {
+  width: 100%;
+  height: 1.5px;
+  transition: none;
+}
+/*photographer*/
+#photographer {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+#photographer ul {
+  display: block;
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+#photographer ul li {
+  flex: auto;
+  max-width: 300px;
+  margin: 0 auto 40px auto;
+}
+#photographer ul li a {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  gap: 10px;
+  overflow: hidden;
+}
+#photographer ul li:hover img {
+  transform: none;
+}
+#photographer ul li:last-of-type {
+  margin-bottom: 0;
+}
+#photographer .photographer-name {
+  padding-top: 0;
+  font-size: 0.875rem;
+}
+.bg-wrapper {
+  background-position: 52% 57px;
+}
+/*about*/
+#about .text {
+  font-size: 0.875rem;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+/*access*/
+#access {
+  margin-bottom: 35px;
+}
+#access .js-translatable {
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+#access .map-icon {
+  width: 10px;
+  height: 14px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+/*footer*/
+#footer {
+  margin-bottom: 15px;
+}
+#footer .copy-right {
+  font-size: 0.625rem;
+}
+/*SP photographer個別ページ*/
+/*common*/
+#tatiana-page .sec-title, 
+#lin-page .sec-title, 
+#aoi-page .sec-title {
+  border-bottom: 1.5px solid #44E32F;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#tatiana-page #tatiana, 
+#lin-page #lin, 
+#aoi-page #aoi{
+  display:block;
+  grid-template-columns: none;
+}
+.back-btn {
+  top: 10%;
+  left: 3%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.material-symbols-outlined {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+#tatiana-page .wrapper, 
+#lin-page .wrapper, 
+#aoi-page .wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+/*image*/
+#tatiana-page .image-list .list img, 
+#lin-page .image-list .list img, 
+#aoi-page .image-list .list img {
+  width: 100%;
+  max-width: 185px;
+  max-height: 123px;
+}
+#tatiana-page #tatiana .image-list, 
+#lin-page #lin .image-list, 
+#aoi-page #aoi .image-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18.56px;
+  max-width: 390px;
+  margin: 25px 0 20px 0;
+}
+/*text*/
+#tatiana-page #tatiana .profile, 
+#lin-page #lin .profile, 
+#aoi-page #aoi .profile {
+  margin-left: 0;
+}
+#tatiana-page #tatiana .links, 
+#lin-page #lin .links, 
+#aoi-page #aoi .links {
+text-align: left;
+margin-left: 0;
+margin-bottom: 36px;
+}
+#tatiana-page #tatiana .links a, 
+#lin-page #lin .links a, 
+#aoi-page #aoi .links a {
+  margin-right: 20px;
+  font-size: 0.75rem;
+  border-bottom: 1px solid #000;
+}
+#tatiana-page #tatiana .name, 
+#lin-page #lin .name, 
+#aoi-page #aoi .name {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+#tatiana-page #tatiana .kana, 
+#lin-page #lin .kana,
+#aoi-page #aoi .kana {
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+#lin-page #lin .desc, 
+#aoi-page #aoi .desc {
+  font-size: 0.875rem;
+  width: 24rem;
+}
+#lin-page #lin .links .x img{
+  width: 16px;
+  height: 16px;
+}
+}
+
+
+
+
